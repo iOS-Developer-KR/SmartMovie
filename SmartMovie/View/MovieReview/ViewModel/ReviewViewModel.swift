@@ -12,7 +12,6 @@ import OpenAI
 @Observable
 class ReviewViewModel {
     let openAI = OpenAI(apiToken: "input_chatgpt_api_key")
-
     let networkFetcher = NetworkFetcher()
     let networkManager = NetworkManager()
     

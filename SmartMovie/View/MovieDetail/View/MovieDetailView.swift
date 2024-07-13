@@ -70,7 +70,6 @@ struct MovieDetailView: View {
                     .foregroundStyle(.white)
                     .font(.footnote)
                     .multilineTextAlignment(.leading)
-                    .padding(.bottom)
                  
                 Divider()
                 
