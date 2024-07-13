@@ -12,6 +12,7 @@ import OpenAI
 @Observable
 class ReviewViewModel {
     let openAI = OpenAI(apiToken: "input_chatgpt_api_key")
+
     let networkFetcher = NetworkFetcher()
     let networkManager = NetworkManager()
     
@@ -70,8 +71,8 @@ class ReviewViewModel {
                         .init(
                             type: .object,
                             properties: [
-                                "pro": .init(type: .string, description: "Summarize shortly these reviews that are positive."),
-                                "con": .init(type: .string, description: "Summarize shortly these reviews that are negative."),
+                                "pro": .init(type: .string, description: "Summarize shortly these reviews that are positive In Korean."),
+                                "con": .init(type: .string, description: "Summarize shortly these reviews that are negative In Korean."),
                             ],
                             required: ["pro", "con"]
                         )

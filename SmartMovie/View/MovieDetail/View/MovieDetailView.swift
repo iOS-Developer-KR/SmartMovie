@@ -60,7 +60,24 @@ struct MovieDetailView: View {
                 
                 actionButtons
 
-                gptSummery
+                SpacedText("줄거리")
+                    .bold()
+                
+                SpacedText(movieDetailVM.movieDetail?.overview ?? "리뷰가 존재하지 않습니다")
+                    .foregroundStyle(.white)
+                    .font(.footnote)
+                    .multilineTextAlignment(.leading)
+                    .padding(.bottom)
+                 
+                MovieReviewView()
+//                NavigationLink {
+//                    MovieReviewView()
+//                        .disabled(reviewVM.reviews.isEmpty)
+//                } label: {
+//                    Text("GPT 요약") // 만약 GPT 분석중이라면 분석중이라고 표현하기
+//                }
+                
+                
                 
             } //VSTACK
             .padding(.top, 40)
@@ -85,13 +102,16 @@ struct MovieDetailView: View {
             } //SCROLLVIEW
         } //SCROLLVIEW
         .ignoresSafeArea()
-        
         .onAppear {
             movieDetailVM.movie = movie
             reviewVM.movie = movie
             reviewVM.processing = true
             checkMovie()
         }
+        .onDisappear {
+            movieDetailVM.casts = []
+        }
+        
 
     }
     

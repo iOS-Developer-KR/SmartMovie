@@ -30,7 +30,7 @@ struct Movie: Codable, Identifiable {
     }
 
     static let skeletonModels: [Movie] = [
-        Movie(id: 1, title: "-", releaseDate: Date(), posterImage: UIImage(named: ""), posterURL: ""),
+        Movie(id: 12312, title: "-", releaseDate: Date(), posterImage: UIImage(named: ""), posterURL: ""),
         Movie(id: 2, title: "-", releaseDate: Date(), posterImage: UIImage(named: ""), posterURL: ""),
         Movie(id: 3, title: "-", releaseDate: Date(), posterImage: UIImage(named: ""), posterURL: ""),
         Movie(id: 4, title: "-", releaseDate: Date(), posterImage: UIImage(named: ""), posterURL: ""),
