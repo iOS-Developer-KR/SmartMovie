@@ -60,7 +60,10 @@ struct MovieDetailView: View {
                 
                 actionButtons
 
+                Divider()
+                
                 SpacedText("줄거리")
+                    .padding(.bottom, 3)
                     .bold()
                 
                 SpacedText(movieDetailVM.movieDetail?.overview ?? "리뷰가 존재하지 않습니다")
@@ -69,15 +72,9 @@ struct MovieDetailView: View {
                     .multilineTextAlignment(.leading)
                     .padding(.bottom)
                  
+                Divider()
+                
                 MovieReviewView()
-//                NavigationLink {
-//                    MovieReviewView()
-//                        .disabled(reviewVM.reviews.isEmpty)
-//                } label: {
-//                    Text("GPT 요약") // 만약 GPT 분석중이라면 분석중이라고 표현하기
-//                }
-                
-                
                 
             } //VSTACK
             .padding(.top, 40)

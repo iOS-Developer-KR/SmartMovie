@@ -19,6 +19,7 @@ func movieHScrollView(movies: [Movie]) -> some View {
                     } label: {
                         MovieHThumbnailView(movie: movie)
                     }
+                    .disabled(movie.title=="-")
                 }
             }
             .scrollIndicators(.hidden)
